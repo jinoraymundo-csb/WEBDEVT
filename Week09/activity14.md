@@ -1,4 +1,4 @@
-# Activity 14: Integration with MongoDB
+# Activity 14: Simple Login
 
 ## Setup:
 1. Create a `activity14` directory
