@@ -12,7 +12,11 @@ npm i express-session
 npm i pbkdf2-password
 npm i
 ```
-4. add a new pug layout file named `login.pug` inside the `views` directory
+4. add this line after `"start": "node ./bin/www"`: (don't forget to add a comma):
+```
+"start:dev": "nodemon ./bin/www"
+```
+5. add a new pug layout file named `login.pug` inside the `views` directory
 ```
 extends layout
 
@@ -28,7 +32,11 @@ block content
     p.buttons
       input(type="submit", value="Save")
 ```
-5. additional config for sessions in `app.js` (after `app.use(express.static...)`):
+6. additional module import in `app.js`:
+```
+var session = require("express-session")
+```
+7. additional config for sessions in `app.js` (after `app.use(express.static...)`):
 ```
 app.use(session({
   resave: false,
@@ -47,12 +55,12 @@ app.use((req, res, next) => {
   next();
 });
 ```
-6. additional module import `routes/index.js`:
+8. additional module import `routes/index.js`:
 ```
 var hash = require('pbkdf2-password')();
 ```
 
-7. dummy "users" database in `routes/index.js`:
+9. dummy "users" database in `routes/index.js`:
 ```
 var users = {
   juandelacruz: { name: 'juan de la cruz' }
@@ -65,7 +73,7 @@ hash({ password: 'kalayaan' }, (err, pass, salt, hash) => {
 });
 ```
 
-8. utility methods in `routes/index.js`:
+10. utility methods in `routes/index.js`:
 ```
 function restrict(req, res, next) {
   if (req.session.user) {
@@ -90,7 +98,7 @@ function authenticate(username, password, fn) {
 }
 ```
 
-9. additional router methods in `routes/index.js`:
+11. additional router methods in `routes/index.js`:
 ```
 router.get('/restricted', restrict, (req, res) => {
   res.send('Accessing a restricted page, click to <a href="/logout">logout</a>');
