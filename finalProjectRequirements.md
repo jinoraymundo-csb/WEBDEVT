@@ -19,6 +19,7 @@
 | course | string | must be one of: BIA, CA, IS, IEMC, BM, EGBM, HRM, MM, CSEC, REM, SIE | 
 
 > Organization
+
 | column name | data type | notes |
 | --- | --- | --- |
 | name | string | must be unique | 
