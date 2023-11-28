@@ -33,7 +33,7 @@ npm i --save-dev nodemon
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize({
   dialect: 'sqlite',
-  storage: 'db/school.db'
+  storage: 'database/school.db'
 });
 
 const db = {};
