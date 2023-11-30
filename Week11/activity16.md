@@ -39,7 +39,7 @@ html
           span.navbar-toggler-icon
         div.collapse.navbar-collapse#navbarCollapse
           ul.navbar-nav.me-auto.mb-2.mb-md-0
-            li.nav-item>(a.nav-link{Link$})*3
+            (li.nav-item>a.nav-link{Link$})*3
           form.d-flex
             input:search.form-control.me-2[placeholder="Search" aria-label="Search"]
             button:submit.btn.btn-outline-success{Search}
