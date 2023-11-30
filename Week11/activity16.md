@@ -110,3 +110,9 @@ html
               a.btn.btn-primary.my-2{Get Started}
               a.btn.btn-secondary.my-2{Logout}
 ```
+
+8. in `views/index.ejs`, add the following:
+```
+<link href="/css/bootstrap.min.css">
+<script src="/js/bootstrap.bundle.min.js">
+```
