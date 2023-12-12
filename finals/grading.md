@@ -22,8 +22,8 @@ Login Page -> is able to print a message unto the console for successful logins 
 > 20 pts
 
 must be able to validate the uniqueness for these fields:
-    * `student.idNumber`
-    * `student.emailAddress`
+* `student.idNumber`
+* `student.emailAddress`
 
 > 10 pts
 
