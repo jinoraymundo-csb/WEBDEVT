@@ -17,7 +17,7 @@ Registration Page -> can submit form and entry is added to db
 
 > 20 pts
 
-Login Page -> is able to print a message unto the console for successful logins (username/password matches)
+Login Page -> is able to print a message unto the console for successful logins (email_address/password matches)
 
 > 20 pts
 
